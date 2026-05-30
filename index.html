@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EdgePlay is a responsible, insight-first betting app prototype." />
+    <title>EdgePlay — Responsible Betting Intelligence</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="EdgePlay home">
+          <span class="brand-mark">E</span>
+          <span>EdgePlay</span>
+        </a>
+        <div class="nav-links">
+          <a href="#markets">Markets</a>
+          <a href="#slip">Smart slip</a>
+          <a href="#safety">Safety</a>
+        </div>
+        <a class="nav-cta" href="#slip">Build bet</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">No hype. Better decisions.</p>
+          <h1>A betting app built around edge, clarity, and control.</h1>
+          <p class="hero-text">
+            EdgePlay combines transparent odds, personal risk guardrails, and a real-time smart slip so every wager starts with a better question: is this bet worth it?
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#markets">Explore live board</a>
+            <a class="button secondary" href="#safety">See safety tools</a>
+          </div>
+          <dl class="trust-metrics" aria-label="Platform highlights">
+            <div>
+              <dt>4.8s</dt>
+              <dd>average cash-out decision window</dd>
+            </div>
+            <div>
+              <dt>0%</dt>
+              <dd>hidden fees in this prototype</dd>
+            </div>
+            <div>
+              <dt>24/7</dt>
+              <dd>limits, locks, and reminders</dd>
+            </div>
+          </dl>
+        </div>
+        <aside class="hero-card" aria-label="Featured match insight">
+          <div class="live-pill">Live model</div>
+          <h2>Storm vs. Rockets</h2>
+          <p class="muted">Basketball · 2nd quarter · market movement</p>
+          <div class="probability-ring" style="--score: 68">
+            <span>68%</span>
+            <small>confidence</small>
+          </div>
+          <div class="signal-row positive">
+            <span>Market edge</span>
+            <strong>+4.2%</strong>
+          </div>
+          <div class="signal-row">
+            <span>Volatility</span>
+            <strong>Medium</strong>
+          </div>
+          <button class="button primary full" data-select="Storm moneyline" data-odds="1.92">Add smart pick</button>
+        </aside>
+      </section>
+
+      <section id="markets" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Featured markets</p>
+          <h2>Compare picks before you commit.</h2>
+          <p>Each card shows implied probability, model confidence, and risk tags in plain language.</p>
+        </div>
+        <div class="market-grid" id="marketGrid" aria-live="polite"></div>
+      </section>
+
+      <section id="slip" class="section slip-section">
+        <div class="smart-slip">
+          <div>
+            <p class="eyebrow">Smart slip</p>
+            <h2>Your wager, stress-tested.</h2>
+            <p class="muted">Add picks, adjust the stake, and see payout plus risk guidance instantly.</p>
+          </div>
+          <div class="slip-panel" aria-label="Bet slip calculator">
+            <div id="selectedPicks" class="selected-picks"></div>
+            <label for="stake">Stake amount</label>
+            <div class="stake-control">
+              <span>$</span>
+              <input id="stake" type="number" min="1" max="500" step="1" value="25" />
+            </div>
+            <div class="slip-results">
+              <div>
+                <span>Combined odds</span>
+                <strong id="combinedOdds">—</strong>
+              </div>
+              <div>
+                <span>Potential return</span>
+                <strong id="potentialReturn">—</strong>
+              </div>
+              <div>
+                <span>Risk level</span>
+                <strong id="riskLevel">—</strong>
+              </div>
+            </div>
+            <p id="slipAdvice" class="advice">Choose a pick to get started.</p>
+            <button class="button primary full" type="button">Review responsible wager</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="safety" class="section safety-section">
+        <div class="section-heading">
+          <p class="eyebrow">Player-first safeguards</p>
+          <h2>Better means safer by default.</h2>
+        </div>
+        <div class="safety-grid">
+          <article>
+            <span class="icon">⏱</span>
+            <h3>Session timers</h3>
+            <p>Gentle prompts help users pause, review outcomes, and avoid autopilot betting.</p>
+          </article>
+          <article>
+            <span class="icon">🛡</span>
+            <h3>Loss limits</h3>
+            <p>Daily, weekly, and custom caps are always visible and never hidden behind menus.</p>
+          </article>
+          <article>
+            <span class="icon">🔍</span>
+            <h3>Transparent math</h3>
+            <p>Implied probability and payout math are shown before any wager can be reviewed.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Prototype only. No real-money wagering. If betting stops being fun, take a break and seek support.</p>
+    </footer>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
